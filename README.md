@@ -21,28 +21,14 @@ Pour utiliser les fonctionnalités de l'API REST, vous devez d'abord vous authen
 
 Pour plus d'informations sur les requêtes à envoyer à l'API REST, consultez la documentation fournie dans le dossier "doc" ouvrez "doc/index.html" dans votre navigateur web.
 
-## Authentification
-
-Pour utiliser les fonctionnalités de l'API, vous devez vous authentifier en utilisant un token JWT valide. Pour ce faire, vous devez effectuer une demande de connexion en envoyant votre nom d'utilisateur et votre mot de passe. Si les informations d'identification sont correctes, vous recevrez un token JWT valide en réponse. Ce token doit être inclus dans le header de chaque requête que vous envoyez à l'API, dans le champ Authorization.
-
-Voici un exemple de header de requête avec le token JWT :
-
-makefile
-
-Authorization: Bearer <votre-token-JWT>
-
 ## Fonctionnalités principales
 ### Publication, consultation, modification et suppression des articles de blogs
 
-Pour publier un nouvel article, envoyez une requête POST à l'URL /articles. Les paramètres de l'article doivent être inclus dans le corps de la requête. Pour consulter tous les articles, envoyez une requête GET à l'URL /articles. Pour consulter un article spécifique, envoyez une requête GET à l'URL /articles/{id} en remplaçant {id} par l'identifiant de l'article que vous souhaitez consulter. Pour modifier un article existant, envoyez une requête PUT à l'URL /articles/{id} avec les paramètres mis à jour inclus dans le corps de la requête. Pour supprimer un article, envoyez une requête DELETE à l'URL /articles/{id} en remplaçant {id} par l'identifiant de l'article que vous souhaitez supprimer.
+Pour publier un nouvel article, envoyez une requête POST à l'URL /article. Les paramètres de l'article doivent être inclus dans le corps de la requête. Pour consulter tous les articles, envoyez une requête GET à l'URL /article. Pour consulter un article spécifique, envoyez une requête GET à l'URL /article/{id} en remplaçant {id} par l'identifiant de l'article que vous souhaitez consulter. Pour modifier un article existant, envoyez une requête PUT à l'URL /article/{id} avec les paramètres mis à jour inclus dans le corps de la requête. Pour supprimer un article, envoyez une requête DELETE à l'URL /article/{id} en remplaçant {id} par l'identifiant de l'article que vous souhaitez supprimer.
 
 ### Authentification des utilisateurs
 
-Pour vous connecter à l'API, envoyez une requête POST à l'URL /auth/login avec vos informations d'identification incluses dans le corps de la requête. Si vos informations d'identification sont correctes, vous recevrez un token JWT valide en réponse. Ce token doit être inclus dans le header de chaque requête que vous envoyez à l'API, dans le champ Authorization.
-
-### Likes/dislikes des articles
-
-Pour liker ou disliker un article, envoyez une requête POST à l'URL /articles/{id}/likes ou /articles/{id}/dislikes en remplaçant {id} par l'identifiant de l'article que vous souhaitez liker ou disliker.
+Pour vous connecter à l'API, envoyez une requête POST à l'URL /login avec vos informations d'identification incluses dans le corps de la requête. Si vos informations d'identification sont correctes, vous recevrez un token JWT valide en réponse. Ce token doit être inclus dans le header de chaque requête que vous envoyez à l'API, dans le champ Authorization.
 
 ## Gestion des erreurs
 
