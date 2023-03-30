@@ -19,8 +19,6 @@ L'API REST peut être testée en envoyant des requêtes HTTP à partir de Postma
 
 Pour utiliser les fonctionnalités de l'API REST, vous devez d'abord vous authentifier. Pour cela, utilisez la méthode POST avec les paramètres username et password sur l'URL http://localhost/votre-dossier/ArticleManager/login.php. Le serveur renverra un token JWT qui doit être inclus dans le header de chaque requête ultérieure.
 
-Pour plus d'informations sur les requêtes à envoyer à l'API REST, consultez la documentation fournie dans le dossier "doc" ouvrez "doc/index.html" dans votre navigateur web.
-
 ## Fonctionnalités principales
 ### Publication, consultation, modification et suppression des articles de blogs
 
