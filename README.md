@@ -24,7 +24,11 @@ Pour plus d'informations sur les requêtes à envoyer à l'API REST, consultez l
 ## Fonctionnalités principales
 ### Publication, consultation, modification et suppression des articles de blogs
 
-Pour publier un nouvel article, envoyez une requête POST à l'URL /article. Les paramètres de l'article doivent être inclus dans le corps de la requête. Pour consulter tous les articles, envoyez une requête GET à l'URL /article. Pour consulter un article spécifique, envoyez une requête GET à l'URL /article/{id} en remplaçant {id} par l'identifiant de l'article que vous souhaitez consulter. Pour modifier un article existant, envoyez une requête PUT à l'URL /article/{id} avec les paramètres mis à jour inclus dans le corps de la requête. Pour supprimer un article, envoyez une requête DELETE à l'URL /article/{id} en remplaçant {id} par l'identifiant de l'article que vous souhaitez supprimer.
+Pour publier un nouvel article, envoyez une requête POST à l'URL /article. Les paramètres de l'article doivent être inclus dans le corps de la requête. 
+Pour consulter tous les articles, envoyez une requête GET à l'URL /article. 
+Pour consulter un article spécifique, envoyez une requête GET à l'URL /article/{id} en remplaçant {id} par l'identifiant de l'article que vous souhaitez consulter. 
+Pour modifier un article existant, envoyez une requête PUT à l'URL /article/{id} avec les paramètres mis à jour inclus dans le corps de la requête. 
+Pour supprimer un article, envoyez une requête DELETE à l'URL /article/{id} en remplaçant {id} par l'identifiant de l'article que vous souhaitez supprimer.
 
 ### Authentification des utilisateurs
 
