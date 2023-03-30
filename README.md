@@ -2,9 +2,24 @@
 
 Cette API REST permet la gestion des articles de blog, y compris la publication, la consultation, la modification, la suppression, les likes/dislikes, et l'authentification des utilisateurs. L'API est conçue pour s'appuyer sur une architecture orientée ressources et est implémentée en utilisant des JSON Web Tokens (JWT) pour l'authentification.
 
-## URL d'accès à l'API REST
+## Accès à l'API REST
 
-L'URL d'accès à l'API REST est : https://votre-domaine.com/api/v1/
+L'API REST n'est pas disponible en ligne, vous devez donc la télécharger et l'exécuter en local sur votre ordinateur.
+
+### Installation de l'API REST
+
+1. Téléchargez les fichiers PHP de l'API REST depuis le dépôt Github.
+2. Déplacez les fichiers dans votre dossier www si vous utilisez WAMP, ou dans le dossier htdocs si vous utilisez XAMPP.
+3. Importez la base de données fournie dans le fichier database.sql
+
+### Utilisation de l'API REST
+
+Une fois l'installation terminée, vous pouvez accéder à l'API REST en utilisant l'URL http://localhost/votre-dossier/ArticleManager/.
+L'API REST peut être testée en envoyant des requêtes HTTP à partir de Postman ou d'un autre outil de votre choix.
+
+Pour utiliser les fonctionnalités de l'API REST, vous devez d'abord vous authentifier. Pour cela, utilisez la méthode POST avec les paramètres username et password sur l'URL http://localhost/votre-dossier/ArticleManager/login.php. Le serveur renverra un token JWT qui doit être inclus dans le header de chaque requête ultérieure.
+
+Pour plus d'informations sur les requêtes à envoyer à l'API REST, consultez la documentation fournie dans le dossier "doc" ouvrez "doc/index.html" dans votre navigateur web.
 
 ## Authentification
 
@@ -34,9 +49,7 @@ Pour liker ou disliker un article, envoyez une requête POST à l'URL /articles/
 L'API renvoie des erreurs avec des codes d'état HTTP appropriés pour signaler les erreurs. Si une erreur se produit, l'API renvoie un objet JSON contenant une description de l'erreur.
 
 Voici un exemple de réponse d'erreur :
-
-css
-
+```
 HTTP/1.1 404 Not Found
 Content-Type: application/json
 
@@ -44,3 +57,4 @@ Content-Type: application/json
   "error": {
     "code": "not_found",
     "message": "L
+```
