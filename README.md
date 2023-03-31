@@ -35,14 +35,3 @@ Pour vous connecter à l'API, envoyez une requête POST à l'URL /login avec vos
 ## Gestion des erreurs
 
 L'API renvoie des erreurs avec des codes d'état HTTP appropriés pour signaler les erreurs. Si une erreur se produit, l'API renvoie un objet JSON contenant une description de l'erreur.
-
-Voici un exemple de réponse d'erreur :
-```
-HTTP/1.1 404 Not Found
-Content-Type: application/json
-
-{
-  "error": {
-    "code": "not_found",
-    "message": "L
-```
