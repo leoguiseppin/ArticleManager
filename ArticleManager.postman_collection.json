@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "a1e73dc8-a204-46d1-9afd-a8ead22c41bf",
+		"name": "ArticleManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25737338"
+	},
+	"item": [
+		{
+			"name": "Récupérer la liste des articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/ArticleManager/article.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ArticleManager",
+						"article.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authentification -> modérateur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\" : \"Jeanne Martin\",\r\n    \"mot_de_passe\" : \"jmartin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/ArticleManager/login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ArticleManager",
+						"login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Moderator -> Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/ArticleManager/article.php?id=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ArticleManager",
+						"article.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authentification -> Publisher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\" : \"Alexandre Dubois\",\r\n    \"mot_de_passe\" : \"adubois456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/ArticleManager/login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ArticleManager",
+						"login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publier un article -> Publisher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auteur\" : \"Alexandre Dubois\",\r\n    \"contenu\" : \"Voici ma publication\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/ArticleManager/article.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ArticleManager",
+						"article.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
